@@ -28,6 +28,6 @@ jobs:
           ACCOUNTS_JSON: ${{ secrets.ACCOUNTS_JSON }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
+          restore_command="home/${USER}/.vmess/web run -c /home/${USER}/.vmess/config.json"
           python3 vless/recover_vless.py
 
